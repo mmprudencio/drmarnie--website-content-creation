@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://moneyskillsstrongminds.com"),
   title: "Dr. Marnie: Pediatric Development Guidance",
   description:
     "Articles, services, books, and courses on pediatric development from Dr. Marnie.",
