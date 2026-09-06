@@ -48,6 +48,8 @@ export type Lead = {
   email: string | null;
   phone: string | null;
   source_path: string | null;
+  message: string | null;
+  consent_share: boolean;
   created_at: string;
 };
 

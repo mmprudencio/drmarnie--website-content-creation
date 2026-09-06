@@ -35,8 +35,31 @@ export default async function Home() {
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-stone-600">
             Practical, expert-backed articles on pediatric development, parenting, and
-            early intervention — plus services, books, and courses to support your family.
+            early intervention, plus services, books, and courses to support your family.
           </p>
+        </div>
+      </section>
+
+      <section className="border-b border-stone-200 bg-emerald-900 text-white">
+        <div className="mx-auto flex max-w-5xl flex-col gap-4 px-6 py-12 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-wide text-amber-300">
+              New book · launching November 2026
+            </p>
+            <h2 className="mt-1 text-2xl font-bold">
+              Money Skills, Strong Minds<span className="align-super text-xs">™</span>
+            </h2>
+            <p className="mt-1 text-emerald-100">
+              From First Coins to Financial Independence. A neurodevelopmental pediatrician&apos;s
+              roadmap for raising financially capable Filipino children.
+            </p>
+          </div>
+          <Link
+            href="/book"
+            className="shrink-0 rounded-md bg-white px-5 py-2.5 text-sm font-semibold text-emerald-900 transition hover:bg-emerald-50"
+          >
+            Read 3 chapters free →
+          </Link>
         </div>
       </section>
 
@@ -50,7 +73,7 @@ export default async function Home() {
           )}
           {!postsResult.error && (postsResult.data?.length ?? 0) === 0 && (
             <p className="rounded-md border border-stone-200 bg-white px-4 py-6 text-center text-stone-500">
-              No posts yet — check back soon.
+              No posts yet. Check back soon.
             </p>
           )}
           {!postsResult.error && (postsResult.data?.length ?? 0) > 0 && (

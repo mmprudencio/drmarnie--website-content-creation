@@ -11,7 +11,10 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Invalid request body." }, { status: 400 });
   }
 
-  const { name, email, phone, source_path } = (body ?? {}) as Record<string, unknown>;
+  const { name, email, phone, source_path, message, consent_share } = (body ?? {}) as Record<
+    string,
+    unknown
+  >;
 
   if (typeof name !== "string" || name.trim().length === 0) {
     return NextResponse.json({ error: "Name is required." }, { status: 400 });
@@ -27,6 +30,8 @@ export async function POST(request: Request) {
       email: typeof email === "string" ? email.trim() : "",
       phone: typeof phone === "string" ? phone.trim() : "",
       source_path: typeof source_path === "string" ? source_path : "",
+      message: typeof message === "string" ? message.slice(0, 5000) : undefined,
+      consent_share: consent_share === true,
     });
     return NextResponse.json({ lead }, { status: 201 });
   } catch {

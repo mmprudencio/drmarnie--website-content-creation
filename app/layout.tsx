@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Dr. Marnie — Pediatric Development Guidance",
+  title: "Dr. Marnie: Pediatric Development Guidance",
   description:
     "Articles, services, books, and courses on pediatric development from Dr. Marnie.",
 };
